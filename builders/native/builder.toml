@@ -1,0 +1,12 @@
+[[buildpacks]]
+id = "dev.boson.noop"
+uri = "./buildpacks/noop"
+
+[[order]]
+[[order.group]]
+id = "dev.boson.noop"
+
+[stack]
+id = "dev.boson.stacks.native"
+build-image = "quay.io/boson/redhat-ubi8-build:native-{{VERSION}}"
+run-image = "quay.io/boson/redhat-ubi8-run:native-{{VERSION}}"

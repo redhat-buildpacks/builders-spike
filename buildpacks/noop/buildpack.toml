@@ -1,0 +1,18 @@
+api = "0.5"
+
+[buildpack]
+id = "dev.boson.noop"
+version = "0.0.1"
+name = "No Op Buildpack"
+
+[[stacks]]
+id = "dev.boson.stacks.native"
+
+[[stacks]]
+id = "dev.boson.stacks.interpreted"
+
+[[stacks]]
+id = "dev.boson.stacks.jvm"
+
+[[stacks]]
+id = "dev.boson.stacks.ubi8"

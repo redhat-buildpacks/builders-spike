@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "---> Noop Buildpack"
+echo "Done!"
+
+# LAUNCHER
+cat > "$layers_dir/launch.toml" << EOF
+[[processes]]
+type = "web"
+command = "echo 'Hello from the Noop buildpack'"
+EOF
