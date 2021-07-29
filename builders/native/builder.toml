@@ -1,6 +1,6 @@
 [[buildpacks]]
 id = "dev.boson.noop"
-uri = "./buildpacks/noop"
+uri = "quay.io/boson/redhat-noop-buildpack:{{VERSION}}"
 
 [[order]]
 [[order.group]]

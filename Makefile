@@ -11,9 +11,9 @@ NATIVE_BUILDER_REPO      := quay.io/boson/redhat-native-builder
 INTERPRETED_BUILDER_REPO := quay.io/boson/redhat-interpreted-builder
 JVM_BUILDER_REPO         := quay.io/boson/redhat-jvm-builder
 
-.PHONY: stacks builders
+.PHONY: stacks buildpack builders test
 
-all: stacks buildpack builders
+all: stacks buildpack builders test
 
 stacks:
 	./stacks/build-stack.sh -v $(VERSION_TAG) stacks/ubi8
@@ -34,5 +34,5 @@ builders:
 	$(PACK_CMD) builder create $(JVM_BUILDER_REPO):$(VERSION_TAG) --config $$TMP_BLDRS/jvm.toml && \
 	rm -fr $$TMP_BLDRS
 
-clean:
-	rm bin/*
+test:
+	./test.sh

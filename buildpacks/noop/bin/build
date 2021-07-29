@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
+layers_dir="$1"
 
 echo "---> Noop Buildpack"
 echo "Done!"
