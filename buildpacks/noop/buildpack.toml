@@ -16,3 +16,6 @@ id = "dev.boson.stacks.jvm"
 
 [[stacks]]
 id = "dev.boson.stacks.ubi8"
+
+[[stacks]]
+id = "dev.boson.stacks.nodejs"
